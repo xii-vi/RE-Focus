@@ -1,3 +1,4 @@
+import axios from "axios";
 import { createContext, useContext, useState,useEffect } from "react";
 
 const WeatherContext = createContext()
@@ -11,14 +12,15 @@ const WeatherProvider = ({children}) => {
     const [longitude, setLongitude] = useState()
 
     useEffect(() => {
-        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${process.env.REACT_APP_API_KEY}`).then((res) => res.json()).then((data) => {
-        console.log(data)   
-        const {name, main, weather} = data
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${process.env.REACT_APP_API_KEY}`).then((res) => 
+        { 
+        const {name, main, weather} = res.data
             setLocation(name);
             setTemperture(Math.round((main.temp)-273.15));
             setWeatherIcon(weather[0].icon);
         })
     },[latitude, longitude, location, weatherIcon])
+    
     return (
         <WeatherContext.Provider value={{
             temperature, setTemperture,
