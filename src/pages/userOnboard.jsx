@@ -1,6 +1,8 @@
-import { Clock,Quote,Weather,WelcomeMsg} from "../components"
+import { Clock,Quote,Weather} from "../components"
+import { AfterOnboarding } from "./afterOnboarding";
 
 export const UserOnboard =()=>{
+    const username = localStorage.getItem("userName");
     const userNameHandler=(e)=> {
         if(e.key === 'Enter'){
             localStorage.setItem("userName", e.target.value)
@@ -11,11 +13,10 @@ export const UserOnboard =()=>{
         <div>
             <Weather />
             <Clock />
-            <div>
+            {username === null ? <div>
             <h1>Konnichiwa, What's your name ?</h1>
             <h1><input type="text" onKeyPress={userNameHandler}/></h1>
-            </div>
-            <WelcomeMsg />
+            </div>:<AfterOnboarding />}          
             <Quote />
         </div>
     )
