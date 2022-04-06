@@ -5,3 +5,10 @@ body{
   background-image: url(https://source.unsplash.com/random/1920x1080/?night,mountains,stars);
 }
 
+.quote{
+  font-size: 55%;
+}
+
+.hidden{
+  display: none;
+}

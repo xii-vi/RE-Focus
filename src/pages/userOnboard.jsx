@@ -1,5 +1,4 @@
-import { Clock } from "../components/clock/clock"
-import { Weather } from "../components/weather/weather"
+import { Clock,Quote,Weather,WelcomeMsg} from "../components"
 
 export const UserOnboard =()=>{
     const userNameHandler=(e)=> {
@@ -12,8 +11,12 @@ export const UserOnboard =()=>{
         <div>
             <Weather />
             <Clock />
-            <h1>Hello, What's your name ?</h1>
+            <div>
+            <h1>Konnichiwa, What's your name ?</h1>
             <h1><input type="text" onKeyPress={userNameHandler}/></h1>
+            </div>
+            <WelcomeMsg />
+            <Quote />
         </div>
     )
 }
