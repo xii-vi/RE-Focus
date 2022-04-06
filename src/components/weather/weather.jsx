@@ -14,12 +14,15 @@ export const Weather=()=> {
         setLongitude(position.coords.longitude)
     })
     
-    return <div className="weather">
+    return (
+    <div className="weather">
         <div className="weatherIcon">
             <img src={`https://openweathermap.org/img/wn/${weatherIcon}@2x.png`}
             alt="Weather-Icon"/>
-        </div>
+            </div>
         <div className="temp">{temperature}<span>&deg;</span></div>
         <div className="location">{location}</div>
-    </div>;
+        
+    </div>
+    );
 }
