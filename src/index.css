@@ -1,21 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=PT+Sans:wght@400;700&family=Syne&display=swap');
 
-body {
-  margin: 0;
-  font-family: 'Lexend', sans-serif;
-  font-size: xx-large;
-  color: #fff;
-}
-input {
-  padding: 1rem;
-  width: 30rem;
-  height: 3rem;
-  color: #fff;
-  font-size: 3rem;
-}
-input, input:hover, input:focus, input:active {
-  background: transparent;
-  outline: none;
-  border: none;
-  border-bottom: 0.25rem solid #fff;
+:root{
+  --text-color:#fff;
+  --btn-bg-color:#f1f1f1;
 }

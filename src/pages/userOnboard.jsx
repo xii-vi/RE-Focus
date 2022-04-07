@@ -11,13 +11,20 @@ export const UserOnboard =()=>{
     }
     return(
         <div>
-            <Weather />
+            <div className="weatherAndClock">
             <Clock />
+            <div>
+            <a href="https://addons.mozilla.org/en-US/firefox/addon/refocus/"><button className="firefox-btn">Add to Firefox</button></a>
+            </div>
+            <Weather />
+            </div> 
             {username === null ? <div>
             <h1>Konnichiwa, What's your name ?</h1>
             <h1><input type="text" onKeyPress={userNameHandler}/></h1>
-            </div>:<AfterOnboarding />}          
+            </div>:<AfterOnboarding />}    
+            <div className="quote-container">    
             <Quote />
+            </div>  
         </div>
     )
 }
