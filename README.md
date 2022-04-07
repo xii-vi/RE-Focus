@@ -3,6 +3,7 @@
 
 ## Demo
 
+![ezgif com-gif-maker (8)](https://user-images.githubusercontent.com/86154835/162262816-2074567f-8d23-45b9-b3ca-ed2d71f607b2.gif)
 
 
 
@@ -36,6 +37,13 @@ Go to the project directory
 - User friendly design
 - Optimized for better performance
 - Personalised welcome message based on the time of the day.
+
+## Screens
+- UserOnboarding ![RE-Focus(Homepaage)](https://user-images.githubusercontent.com/86154835/162262417-2ce8faea-c3be-49f9-83f6-39419229fcc4.png)
+
+- Welcomne Message
+
+![welcom msg](https://user-images.githubusercontent.com/86154835/162262500-c4a4bd17-3c6c-4897-b256-d7d906e2a54b.png)
 
 
 ## Authors
