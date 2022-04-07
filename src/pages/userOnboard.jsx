@@ -14,7 +14,7 @@ export const UserOnboard =()=>{
             <div className="weatherAndClock">
             <Clock />
             <div>
-            <a href="#"><button className="firefox-btn">Add to Firefox</button></a>
+            <a href="https://addons.mozilla.org/en-US/firefox/addon/refocus/"><button className="firefox-btn">Add to Firefox</button></a>
             </div>
             <Weather />
             </div> 
