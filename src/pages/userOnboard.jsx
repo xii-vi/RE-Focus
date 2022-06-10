@@ -1,4 +1,4 @@
-import { Clock,Quote,Weather} from "../components"
+import { Clock,Quote,Weather,Todos} from "../components"
 import { AfterOnboarding } from "./afterOnboarding";
 
 export const UserOnboard =()=>{
@@ -10,19 +10,20 @@ export const UserOnboard =()=>{
         }
     }
     return(
-        <div>
+        <div className="app-layout">
             <div className="weatherAndClock">
             <Clock />
+            <Weather />
+            </div> 
             <div>
             <a href="https://addons.mozilla.org/en-US/firefox/addon/refocus/"><button className="firefox-btn">Add to Firefox</button></a>
             </div>
-            <Weather />
-            </div> 
             {username === null ? <div>
             <h1>Konnichiwa, What's your name ?</h1>
-            <h1><input type="text" onKeyPress={userNameHandler}/></h1>
+            <h1><input className="input-container" type="text" onKeyPress={userNameHandler} Required/></h1>
             </div>:<AfterOnboarding />}    
-            <div className="quote-container">    
+            <div className="center-flex">    
+            <Todos />
             <Quote />
             </div>  
         </div>

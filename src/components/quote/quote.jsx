@@ -5,9 +5,8 @@ export const Quote = () => {
         const currentQuote = animeQuote.quote;
         const currentAuthor = animeQuote.author;
         return (
-        <div>
-            <q className="quote">{currentQuote} </q> 
-            <p> ~ {currentAuthor} </p>
+        <div className="center-flex">
+            <q className="quote">{currentQuote} ~ {currentAuthor}</q> 
         </div>
         )
     }
