@@ -1,31 +1,50 @@
 .App {
   text-align: center;
 }
+.app-layout{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 100vh;
+}
 body{
   background-image: url(https://source.unsplash.com/random/1920x1080/?night,mountains,stars);
   margin: 0;
   font-family: 'Lexend', sans-serif;
-  font-size: xx-large;
+  font-size: 24px;
   color: var(--text-color);
 }
-input {
+.input-container {
   padding: 1rem;
   width: 30rem;
   height: 3rem;
   color: var(--text-color);
   font-size: 3rem;
 }
-input, input:hover, input:focus, input:active {
+.center-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.input-container-todo{
+  padding: 0.5rem;
+  margin: 1rem;
+  color: var(--text-color);
+  background: transparent;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  border-bottom: 0.25rem solid var(--text-color);
+}
+.input-container, .input-container:hover, .input-container:focus, .input-container:active {
   background: transparent;
   outline: none;
   border: none;
   border-bottom: 0.25rem solid var(--text-color);
 }
 .quote{
-  font-size: 55%;
-}
-.quote-container{
-  margin-top: 5rem;
+  font-size: 75%;
 }
 .edit-btn,.firefox-btn{
   border-radius: 5px;
@@ -46,8 +65,53 @@ input, input:hover, input:focus, input:active {
 }
 .weatherAndClock{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 0 1rem;
+}
+
+.modal-container{
+  display: flex;
+  justify-content:space-between;
+}
+
+.close-btn{
+  background:transparent;
+}
+
+.fa-times-circle{
+  color: var(--btn-bg-color);
+}
+.fa-trash{
+  color: var(--btn-delete);
+  background: transparent;
+}
+
+::placeholder {
+  color: var(--text-color);
+}
+
+.line-through{
+  text-decoration: line-through;
+  text-decoration-color: var(--btn-delete);
+}
+
+.todo-container{
+  padding: 2rem;
+}
+.text-align-left{
+  text-align: left;
+}
+
+@media screen and (max-width: 480px) {
+  .input-container{
+    width: 80%;
+  }
+  .app-layout{
+    padding: 1rem;
+  }
+  body{
+    font-size:1rem;
+  }
+  
 }

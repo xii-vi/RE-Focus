@@ -17,7 +17,7 @@ export const MainFocus=()=> {
         return (
             <div>
                 <h1>What's your main focus for today ?</h1>
-                <h1><input type="text" onKeyPress={mainFocusHandler}/></h1>
+                <h1><input className="input-container" type="text" onKeyPress={mainFocusHandler} required/></h1>
             </div>
         )
     }
@@ -25,7 +25,7 @@ export const MainFocus=()=> {
         return (
             <div>
                 <h1>Your main focus for today is {focusMessage} </h1> 
-                <button className="edit-btn" onClick={focusEditHandler}>Edit</button>
+                <button className="edit-btn" onClick={focusEditHandler}>Edit Today's Focus</button>
             </div>
         )
     }
